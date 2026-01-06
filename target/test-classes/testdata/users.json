@@ -1,0 +1,14 @@
+{
+  "PRE_SALES": {
+    "username": "presales@braincellinfotech.ai",
+    "password": "password123"
+  },
+  "SITE_ADMIN": {
+    "username": "siteadmin@braincellinfotech.ai",
+    "password": "password123"
+  },
+  "SALES_EXEC": {
+    "username": "salesexec@braincellinfotech.ai",
+    "password": "password123"
+  }
+}
