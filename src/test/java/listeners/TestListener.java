@@ -23,20 +23,43 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        ExtentTestManager.getTest().pass("Test Passed");
+        ExtentTestManager.getTest()
+                .pass("✅ Test Passed");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
+
+        ExtentTest test = ExtentTestManager.getTest();
+        test.fail(result.getThrowable());
 
         String path = ScreenshotUtils.capture(
                 DriverFactory.getDriver(),
                 result.getMethod().getMethodName()
         );
 
-        ExtentTestManager.getTest()
-                .fail(result.getThrowable())
-                .addScreenCaptureFromPath(path);
+        // ✅ CRITICAL SAFETY CHECK
+        if (path != null && !path.isEmpty()) {
+            test.addScreenCaptureFromPath(path);
+        } else {
+            test.warning("⚠ Screenshot not available");
+        }
+    }
+
+    @Override
+    public void onTestSkipped(ITestResult result) {
+
+        ExtentTest test = ExtentTestManager.getTest();
+        test.skip(result.getThrowable());
+
+        String path = ScreenshotUtils.capture(
+                DriverFactory.getDriver(),
+                result.getMethod().getMethodName() + "_SKIPPED"
+        );
+
+        if (path != null && !path.isEmpty()) {
+            test.addScreenCaptureFromPath(path);
+        }
     }
 
     @Override

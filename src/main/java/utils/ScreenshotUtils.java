@@ -12,14 +12,20 @@ import java.time.LocalDateTime;
 public class ScreenshotUtils {
 
     public static String capture(WebDriver driver, String testName) {
+
         try {
+            if (driver == null) {
+                return null;
+            }
+
             File src =
                     ((TakesScreenshot) driver)
                             .getScreenshotAs(OutputType.FILE);
 
             String fileName =
-                    testName + "_" + LocalDateTime.now().toString()
-                            .replace(":", "_") + ".png";
+                    testName + "_"
+                            + LocalDateTime.now().toString().replace(":", "_")
+                            + ".png";
 
             Path dest =
                     Path.of("test-output/screenshots/", fileName);
@@ -30,6 +36,7 @@ public class ScreenshotUtils {
             return dest.toString();
 
         } catch (Exception e) {
+            System.err.println("Screenshot capture failed: " + e.getMessage());
             return null;
         }
     }

@@ -6,6 +6,7 @@ public class PreSalesData {
     private String mobile;
     private String email;
     private String enquiryDate;
+    private String dateSelectionType;
     private String projectType;
     private String leadSource;
     private String projectName;
@@ -24,6 +25,10 @@ public class PreSalesData {
 
     public String getEnquiryDate() {
         return enquiryDate;
+    }
+    
+    public String getDateSelectionType() {
+    	return dateSelectionType;
     }
 
     public String getProjectType() {

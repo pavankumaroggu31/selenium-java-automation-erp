@@ -11,12 +11,14 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp() {
-        DriverFactory.initDriver();
-        driver = DriverFactory.getDriver();
+        System.out.println("Initializing WebDriver...");
+        DriverFactory.initDriver();  // Initialize WebDriver
+        driver = DriverFactory.getDriver();  // Get the WebDriver instance
     }
 
     @AfterMethod
     public void tearDown() {
-        DriverFactory.quitDriver();
+        System.out.println("Cleaning up WebDriver...");
+        DriverFactory.quitDriver();  // Quit WebDriver after the test
     }
 }

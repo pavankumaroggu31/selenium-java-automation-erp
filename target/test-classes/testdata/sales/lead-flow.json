@@ -2,7 +2,8 @@
   "customerName": "Ravi Kumar",
   "mobile": "9876543210",
   "email": "ravi@gmail.com",
-  "enquiryDate": "Choose Monday, October 21st, 2025",
+  "enquiryDate": "27-08-1997",
+  "dateSelectionType": "DIRECT",
   "projectType": "Apartment",
   "leadSource": "Website",
   "projectName": "Mana Skanda"

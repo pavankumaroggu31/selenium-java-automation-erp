@@ -12,10 +12,28 @@ public class LeadCreationPage {
     private final DateUtils dateUtils;
 
     private final By addLeadBtn = By.xpath("//button[contains(text(),'Add Lead')]");
-    private final By customerName = By.name("customerName");
-    private final By mobile = By.name("mobile");
-    private final By email = By.name("email");
-    private final By enquiryDate = By.name("enquiryDate");
+    private final By customerName = By.id("customerName");
+    private final By mobile = By.xpath("//input[@data-testid='input-enter-mobile-number']");
+    private final By email = By.id("email");
+    
+ // ===== Calendar Locators (ONLY HERE) =====
+    // Direct input field
+    private final By enquiryDateInput =
+    		 By.xpath("//input[@data-testid='input-select-enquiry-date']");
+
+    // Calendar open button / icon
+    private final By enquiryCalendarIcon =
+            By.xpath("(//button[@type=\"button\"])[8]");
+
+    private final By yearDropdown =
+            By.xpath("//select[@aria-label='Choose the Year']");
+
+    private final By monthDropdown =
+            By.xpath("//select[@aria-label='Choose the Month']");
+
+    private final String dayXpath =
+            "//div[text()='%s']";
+    
     private final By projectType = By.name("projectType");
     private final By leadSource = By.name("leadSource");
     private final By projectName = By.name("project");
@@ -31,8 +49,26 @@ public class LeadCreationPage {
         ui.type(customerName, data.getCustomerName());
         ui.type(mobile, data.getMobile());
         ui.type(email, data.getEmail());
-        dateUtils.selectDate(enquiryDate, data.getEnquiryDate());
-        ui.selectCustomDropdown(projectType, data.getProjectType());
+        // ✅ DATE HANDLING DECISION
+            if ("DIRECT".equalsIgnoreCase(data.getDateSelectionType())) {
+
+                dateUtils.enterDateDirectly(
+                        enquiryDateInput,
+                        data.getEnquiryDate()
+                );
+
+            } else {
+
+                dateUtils.selectDateFromCalendar(
+                        enquiryCalendarIcon,
+                        yearDropdown,
+                        monthDropdown,
+                        dayXpath,
+                        data.getEnquiryDate()
+                );
+            }
+        
+        ui.type(projectType, data.getProjectType());
         ui.selectCustomDropdown(leadSource, data.getLeadSource());
         ui.selectCustomDropdown(projectName, data.getProjectName());
         ui.click(saveBtn);

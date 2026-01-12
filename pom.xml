@@ -16,7 +16,8 @@
         <java.version>17</java.version>
 
         <selenium.version>4.18.1</selenium.version>
-        <testng.version>7.9.0</testng.version>
+        <testng.version>7.9.0</testng.version> <!-- Update TestNG version -->
+
         <webdrivermanager.version>5.7.0</webdrivermanager.version>
 
         <jackson.version>2.17.1</jackson.version>
@@ -33,15 +34,21 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>${selenium.version}</version>
+            <version>${selenium.version}</version> <!-- Update Selenium version -->
         </dependency>
 
         <!-- TestNG -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>${testng.version}</version>
+            <version>${testng.version}</version> <!-- Updated TestNG version -->
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.13</version>
         </dependency>
 
         <!-- WebDriverManager -->
@@ -63,6 +70,13 @@
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>${extentreports.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.2</version>  <!-- Choose a suitable version -->
+            <scope>test</scope>
         </dependency>
 
     </dependencies>

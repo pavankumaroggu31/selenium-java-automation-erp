@@ -1,6 +1,7 @@
 package utils;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.Select;
 
 public class UIActions {
 
@@ -33,7 +34,9 @@ public class UIActions {
     public void type(By locator, String value) {
         WebElement element = waitUtils.waitForVisible(locator);
         scrollToCenter(element);
-        element.clear();
+        element.click();
+        element.sendKeys(Keys.CONTROL + "a");
+        element.sendKeys(Keys.DELETE);
         element.sendKeys(value);
     }
 
@@ -96,7 +99,7 @@ public class UIActions {
     /* =========================
        CUSTOM DROPDOWN
        ========================= */
-
+    
     public void selectCustomDropdown(By dropdown, String value) {
         try {
             // 1. Open dropdown
