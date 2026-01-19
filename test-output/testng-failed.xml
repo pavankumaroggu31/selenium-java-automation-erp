@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verifyLeadCreation"/>
+          <include name="navigateToInProgressProspect"/>
         </methods>
       </class> <!-- tests.sales.LeadToBookingE2ETest -->
     </classes>

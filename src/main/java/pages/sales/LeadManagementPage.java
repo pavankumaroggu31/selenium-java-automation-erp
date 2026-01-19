@@ -193,16 +193,14 @@ public class LeadManagementPage {
      * This opens the Quick View side panel.
      */
 	public void openFirstLeadFromList() {
-	
-	    By firstRow =
-	        By.xpath("//table//tbody//tr");
-	
-	    // 1️⃣ Wait until at least one row is present
-	    ui.waitForPresence(firstRow);
-	
-	    // 2️⃣ Click the first row AFTER table is ready
-	    ui.click(By.xpath("(//table//tbody//tr//td)[2]"));
+
+	    By firstRowNameCell =
+	        By.xpath("(//table//tbody//tr)[1]//td[2]");
+
+	    ui.waitForPresence(firstRowNameCell);
+	    ui.click(firstRowNameCell);
 	}
+
 
 	public String getClientNameFromList() {
 	
