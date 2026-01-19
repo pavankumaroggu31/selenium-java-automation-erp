@@ -20,9 +20,9 @@ public class UIActions {
        ========================= */
 
     public void click(By locator) {
-        WebElement element = waitUtils.waitForClickable(locator);
-        scrollToCenter(element);
-        element.click();
+        waitUtils.waitForClickable(locator);
+        waitUtils.waitForPresence(locator);  
+        driver.findElement(locator).click();
     }
 
     public void jsClick(By locator) {
@@ -36,8 +36,18 @@ public class UIActions {
         scrollToCenter(element);
         element.click();
         element.sendKeys(Keys.CONTROL + "a");
-        element.sendKeys(Keys.DELETE);  // Clears the input field
-        element.sendKeys(value);  // Types the new value
+        element.sendKeys(Keys.DELETE);
+        element.sendKeys(value);
+    }
+    
+    
+    
+    public String getText(By locator) {
+        return driver.findElement(locator).getText();
+    }
+    
+    public void waitForPresence(By locator) {
+        waitUtils.waitForPresence(locator);
     }
 
 
@@ -100,27 +110,24 @@ public class UIActions {
     /* =========================
        CUSTOM DROPDOWN
        ========================= */
+    
     public void selectCustomDropdown(By dropdown, String value) {
         try {
             // Open dropdown
             WebElement trigger = waitUtils.waitForClickable(dropdown);
             trigger.click();
-
             // Select option (Radix / ShadCN safe)
             By optionLocator = By.xpath(
                     "//div[@role='option' and normalize-space()='" + value + "']" +
                     " | //span[normalize-space()='" + value + "']"
             );
-
             WebElement option = waitUtils.waitForClickable(optionLocator);
             js.executeScript("arguments[0].click();", option);
-
         } catch (Exception e) {
             throw new RuntimeException(
-                    "❌ Failed to select dropdown value: " + value,
+                    "Failed to select dropdown value: " + value,
                     e
             );
         }
     }
-    
 }

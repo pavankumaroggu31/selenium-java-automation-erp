@@ -3,6 +3,7 @@ package utils;
 import com.google.gson.Gson;
 
 import datamodels.sales.PreSalesData;
+import datamodels.sales.QuickViewData;
 import datamodels.users.UserEMPRoles;
 
 import java.io.InputStreamReader;
@@ -32,4 +33,16 @@ public class JsonDataReader {
                 PreSalesData.class
         );
     }
+    
+    public static QuickViewData readQuickViewData() {
+        return gson.fromJson(
+        		new InputStreamReader(
+                        JsonDataReader.class
+                                .getClassLoader()
+                                .getResourceAsStream("testdata/sales/quickViewData.json")
+                ),
+            QuickViewData.class
+        );
+    }
+
 }

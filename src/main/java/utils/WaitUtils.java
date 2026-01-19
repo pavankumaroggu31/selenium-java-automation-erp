@@ -31,4 +31,9 @@ public class WaitUtils {
                 ExpectedConditions.elementToBeClickable(locator)
         );
     }
+    
+    public void waitForPresence(By locator) {
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
+
 }
