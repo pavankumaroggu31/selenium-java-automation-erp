@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">ERP Automation Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 12, 2026 11:45:10 AM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 19, 2026 09:30:19 AM</span></a>
 </li>
 </ul>
 </div>
@@ -86,7 +86,7 @@
           <div class="test-detail">
             <p class="name">verifyLeadCreation</p>
             <p class="text-sm">
-              <span>11:45:10 AM</span> / <span>00:00:27:946</span>
+              <span>9:30:20 AM</span> / <span>00:00:46:349</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -95,39 +95,55 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">verifyLeadCreation</h5>
-<span class='badge badge-success'>01.12.2026 11:45:10 AM</span>
-<span class='badge badge-danger'>01.12.2026 11:45:38 AM</span>
-<span class='badge badge-default'>00:00:27:946</span>
+<span class='badge badge-success'>01.19.2026 9:30:20 AM</span>
+<span class='badge badge-danger'>01.19.2026 9:31:06 AM</span>
+<span class='badge badge-default'>00:00:46:349</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='test-output\screenshots\verifyLeadCreation_2026-01-12T11_45_38.359886600.png' src="test-output\screenshots\verifyLeadCreation_2026-01-12T11_45_38.359886600.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:45:38 AM</td>
+        <td>9:31:06 AM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.name: projectType (tried for 20 second(s) with 500 milliseconds interval)
+          <textarea readonly class="code-block">org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=143.0.7499.194)
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows Server 2019', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\oggpa1\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59193}, goog:processID: 1268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59193/devtoo..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8da72248ee56c3501e26776766afd5f4
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisible(WaitUtils.java:24)
-	at utils.UIActions.type(UIActions.java:35)
-	at pages.sales.LeadCreationPage.createLead(LeadCreationPage.java:71)
-	at workflows.sales.SalesLeadWorkflow.createLeadAsPreSales(SalesLeadWorkflow.java:40)
+Command: [07bf695d00f3d48ceaf04544b9742bd7, findElement {using=xpath, value=//button[contains(text(),'Logout')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.194, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\oggpa1\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61855}, goog:processID: 16188, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61855/devtoo..., se:cdpVersion: 143.0.7499.194, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 07bf695d00f3d48ceaf04544b9742bd7
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at utils.WaitUtils.waitForClickable(WaitUtils.java:30)
+	at utils.UIActions.click(UIActions.java:23)
+	at pages.common.HeaderComponent.logout(HeaderComponent.java:18)
+	at workflows.sales.SalesLeadWorkflow.createLeadAsPreSales(SalesLeadWorkflow.java:41)
 	at tests.sales.LeadToBookingE2ETest.verifyLeadCreation(LeadToBookingE2ETest.java:24)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -159,6 +175,13 @@ Session ID: 8da72248ee56c3501e26776766afd5f4
           
         </td>
       </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>9:31:06 AM</td>
+        <td>
+          ⚠ Screenshot not available
+        </td>
+      </tr>
   </tbody>
 </table>
 </div>
@@ -186,12 +209,12 @@ Session ID: 8da72248ee56c3501e26776766afd5f4
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.TimeoutException</p>
+<p class="name">org.openqa.selenium.NoSuchSessionException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.TimeoutException</h4>
+<h4>org.openqa.selenium.NoSuchSessionException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -205,7 +228,7 @@ Session ID: 8da72248ee56c3501e26776766afd5f4
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>11:45:10 AM</td>
+<td>09:30:20 AM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>verifyLeadCreation</a>
 </td>
@@ -227,13 +250,13 @@ Session ID: 8da72248ee56c3501e26776766afd5f4
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 12, 2026 11:45:10 AM</h3>
+<h3>Jan 19, 2026 09:30:19 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 12, 2026 11:45:38 AM</h3>
+<h3>Jan 19, 2026 09:31:06 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -286,8 +309,8 @@ Session ID: 8da72248ee56c3501e26776766afd5f4
 <div class="card-footer">
 <div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
-<small data-tooltip='100%'><b>1</b> events failed,
-<b data-tooltip='%'>0</b> others
+<small data-tooltip='50%'><b>1</b> events failed,
+<b data-tooltip='%'>1</b> others
 </small>
 </div>
 </div>
@@ -303,7 +326,7 @@ Session ID: 8da72248ee56c3501e26776766afd5f4
 </div></div>
 <script>
 var timeline = {
-"verifyLeadCreation":27.946
+"verifyLeadCreation":46.349
 };
 </script>
 <div class="row">
@@ -331,7 +354,7 @@ infoGrandChild: 0,
 eventsCount: 5,
 passEvents: 0,
 failEvents: 1,
-warningEvents: 0,
+warningEvents: 1,
 skipEvents: 0,
 infoEvents: 0
 };

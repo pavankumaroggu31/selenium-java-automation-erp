@@ -36,9 +36,10 @@ public class UIActions {
         scrollToCenter(element);
         element.click();
         element.sendKeys(Keys.CONTROL + "a");
-        element.sendKeys(Keys.DELETE);
-        element.sendKeys(value);
+        element.sendKeys(Keys.DELETE);  // Clears the input field
+        element.sendKeys(value);  // Types the new value
     }
+
 
     /* =========================
        SCROLL METHODS (FINAL)
@@ -99,33 +100,27 @@ public class UIActions {
     /* =========================
        CUSTOM DROPDOWN
        ========================= */
-    
     public void selectCustomDropdown(By dropdown, String value) {
         try {
-            // 1. Open dropdown
-            WebElement dropdownButton = waitUtils.waitForClickable(dropdown);
-            scrollToCenter(dropdownButton);
-            dropdownButton.click();
+            // Open dropdown
+            WebElement trigger = waitUtils.waitForClickable(dropdown);
+            trigger.click();
 
-            // 2. YOUR EXACT WORKING LOCATORS (UNCHANGED)
+            // Select option (Radix / ShadCN safe)
             By optionLocator = By.xpath(
-                    "//div[@role='dialog']//*[contains(text(),'" + value + "')] | " +
-                    "//div[@role='presentation']//*[contains(text(),'" + value + "')] | " +
-                    "//div[contains(text(),'" + value + "')]"
+                    "//div[@role='option' and normalize-space()='" + value + "']" +
+                    " | //span[normalize-space()='" + value + "']"
             );
 
-            // 3. Select option
             WebElement option = waitUtils.waitForClickable(optionLocator);
-            scrollToCenter(option);
             js.executeScript("arguments[0].click();", option);
 
         } catch (Exception e) {
             throw new RuntimeException(
-                    "❌ Failed to select '" + value +
-                    "' from custom dropdown. Locator: " + dropdown +
-                    " | Error: " + e.getMessage(),
+                    "❌ Failed to select dropdown value: " + value,
                     e
             );
         }
     }
+    
 }

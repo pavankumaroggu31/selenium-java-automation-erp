@@ -2,38 +2,61 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-12T11:45:06 IST" name="Default suite" finished-at="2026-01-12T11:45:38 IST" duration-ms="32462">
+  <suite started-at="2026-01-19T09:30:15 IST" name="Default suite" finished-at="2026-01-19T09:31:06 IST" duration-ms="50753">
     <groups>
     </groups>
-    <test started-at="2026-01-12T11:45:06 IST" name="Default test" finished-at="2026-01-12T11:45:38 IST" duration-ms="32462">
+    <test started-at="2026-01-19T09:30:15 IST" name="Default test" finished-at="2026-01-19T09:31:06 IST" duration-ms="50753">
       <class name="tests.sales.LeadToBookingE2ETest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.sales.LeadToBookingE2ETest@1fa121e2]" started-at="2026-01-12T11:45:06 IST" name="setUp" finished-at="2026-01-12T11:45:10 IST" duration-ms="3853" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.sales.LeadToBookingE2ETest@1fa121e2]" started-at="2026-01-19T09:30:15 IST" name="setUp" finished-at="2026-01-19T09:30:19 IST" duration-ms="4030" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLeadCreation()[pri:0, instance:tests.sales.LeadToBookingE2ETest@1fa121e2]" started-at="2026-01-12T11:45:10 IST" name="verifyLeadCreation" description="Pre-Sales creates a lead" finished-at="2026-01-12T11:45:38 IST" duration-ms="28134" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="verifyLeadCreation()[pri:0, instance:tests.sales.LeadToBookingE2ETest@1fa121e2]" started-at="2026-01-19T09:30:19 IST" name="verifyLeadCreation" description="Pre-Sales creates a lead" finished-at="2026-01-19T09:31:06 IST" duration-ms="46545" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.name: projectType (tried for 20 second(s) with 500 milliseconds interval)
+              <![CDATA[invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=143.0.7499.194)
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows Server 2019', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\oggpa1\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59193}, goog:processID: 1268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59193/devtoo..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8da72248ee56c3501e26776766afd5f4]]>
+Command: [07bf695d00f3d48ceaf04544b9742bd7, findElement {using=xpath, value=//button[contains(text(),'Logout')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.194, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\oggpa1\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61855}, goog:processID: 16188, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61855/devtoo..., se:cdpVersion: 143.0.7499.194, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 07bf695d00f3d48ceaf04544b9742bd7]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.name: projectType (tried for 20 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=143.0.7499.194)
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows Server 2019', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\oggpa1\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59193}, goog:processID: 1268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59193/devtoo..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8da72248ee56c3501e26776766afd5f4
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WaitUtils.waitForVisible(WaitUtils.java:24)
-at utils.UIActions.type(UIActions.java:35)
-at pages.sales.LeadCreationPage.createLead(LeadCreationPage.java:71)
-at workflows.sales.SalesLeadWorkflow.createLeadAsPreSales(SalesLeadWorkflow.java:40)
+Command: [07bf695d00f3d48ceaf04544b9742bd7, findElement {using=xpath, value=//button[contains(text(),'Logout')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.194, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\oggpa1\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61855}, goog:processID: 16188, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61855/devtoo..., se:cdpVersion: 143.0.7499.194, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 07bf695d00f3d48ceaf04544b9742bd7
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at utils.WaitUtils.waitForClickable(WaitUtils.java:30)
+at utils.UIActions.click(UIActions.java:23)
+at pages.common.HeaderComponent.logout(HeaderComponent.java:18)
+at workflows.sales.SalesLeadWorkflow.createLeadAsPreSales(SalesLeadWorkflow.java:41)
 at tests.sales.LeadToBookingE2ETest.verifyLeadCreation(LeadToBookingE2ETest.java:24)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -63,11 +86,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLeadCreation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.sales.LeadToBookingE2ETest@1fa121e2]" started-at="2026-01-12T11:45:38 IST" name="tearDown" finished-at="2026-01-12T11:45:38 IST" duration-ms="232" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.sales.LeadToBookingE2ETest@1fa121e2]" started-at="2026-01-19T09:31:06 IST" name="tearDown" finished-at="2026-01-19T09:31:06 IST" duration-ms="37" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
